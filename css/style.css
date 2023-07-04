@@ -1,0 +1,64 @@
+.fly-content{
+    position: relative;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;  */
+    animation: birdFly 15s linear infinite;
+        /* animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; */
+}
+@keyframes birdFly {
+    from{
+        left: 0%;
+    }
+    to{
+        left: 100%;
+    }
+}
+.box{
+    width: 175px;
+    height: 271px;
+    background-image: url(../img/bird.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* will-change: background-position; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;  */
+    animation: bird-animation 1s steps(7) infinite;
+    /* animation-duration:1s;
+    animation-timing-function: steps(7);
+    animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+}
+
+@keyframes bird-animation {
+    0%{
+        background-position: 0px 0px;
+    }
+    /* 25%{
+        background-position: 150px 0px;
+    }
+    50%{
+        background-position: 300px 0px;
+    } */
+    100%{
+        background-position: -1285px 0px;
+    }
+}
+
+.twitter-bird{
+    width: 140px;
+    height: 150px;
+    background-image: url('../img/twitter-bird-sprite.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    animation: flyTwitter 1s steps(3) infinite;
+    transform: translateZ(45deg);
+}
+@keyframes flyTwitter {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -450px 0px;
+    }
+}
